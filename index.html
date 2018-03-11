@@ -6,22 +6,43 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("#div1").load("CrreateAccount.html");
-            });
-        });
+       
         </script>
+        <style>
+            #myButton{
+
+                width: 100px;
+
+            }
+            #loginButton{
+
+                width: 100px;
+
+            }
+            body{
+                background-color: burlywood;
+            }
+        </style>
 </head>
 <body>
 
 <h1 style="text-align: center; font-size: 70px;">Smart Living OS</h1>
-<div style="text-align: center; padding-bottom: 50px;">
-<button type="button" id="loginButton" onclick="alert('You Clicked Login')" style=" height: 50px;width: 100px;font-size: 20px;">Login</button>
+<div style="text-align: center; padding-bottom: 50px; padding-top: 50px;">
+        <form action="/action_page.php">
+            User Name:
+            <input type="text" name="userName">
+            <br><br>
+            Password:
+            <input type="password" name="password">
+            <br>
+          </form> 
+          
+
 </div>
 <div style="text-align: center;">
-<button id="myButton"  class="float-left submit-button" style=" height: 50px;width: 100px;font-size: 15px;" >Create Account</button>
-
+    <button type="button" id="loginButton">Login Account</button>
+    <button type="button" id="myButton">Create Account</button>
+</div>
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
         location.href = "CreateAccount.html";
@@ -31,7 +52,7 @@
         location.href = "UserPage.html";
     };
 </script>
-</div>
+
 
 
 </body>
