@@ -11,9 +11,12 @@ $(document).ready(function(){
         $("p").hide();
     });
 });
-document.getElementById("logoutButton").onclick = function () {
+function myOtherFunction() {
+    document.getElementById("logoutButton").onclick = function () {
         location.href = "index.html";
     };
+}
+
 
 function changeText(id){
     
@@ -125,7 +128,7 @@ function myFunction() {
         <button class="tablinks">Account Settings</button>
         <button class="tablinks">Add Data</button>
         <button class="tablinks">Generate Report</button>
-        <button  id="logoutButton">Log Out</button>
+        <button  id="logoutButton" onclick="myOtherFunction()">Log Out</button>
       </div>
       <div style="    text-align: center;">
             <img id="Base"style="vertical-align: middle; height: 550px; width: 1910px;" src="pexels-photo-414171.jpeg"/>
