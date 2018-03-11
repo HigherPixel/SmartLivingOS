@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+document.getElementById("logoutButton").onclick = function () {
+        location.href = "index.html";
+    };
+
+function changeText(id){
+    
+      if ($('#'+id).is(':checked')) {
+        $('#'+id +"+span").html('Edit Mode');
+        document.getElementById("Info").readOnly = false;
+      }else{
+        $('#'+id+ "+span").html('Click for Edit Mode');
+        document.getElementById("Info").readOnly = true;
+      }
+    }
+
+    
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<style>
+    body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  z-index: 3;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+#Base
+	{
+		top: 100px;
+        left: 10px;
+        z-index: 1;
+	}
+#ProfilePic
+	{
+		position: absolute;
+        top: 300px;
+        left: 850px;
+        z-index: 2;
+	}
+</style>
+</head>
+
+<body>
+        <div class="header" id="myHeader">
+                <h1>Hello, Vas Binglebear</h1>
+              </div>
+    
+
+    <div class="tab">
+        <button class="tablinks">Account Settings</button>
+        <button class="tablinks">Add Data</button>
+        <button class="tablinks">Generate Report</button>
+        <button  id="logoutButton">Log Out</button>
+      </div>
+      <div style="    text-align: center;">
+            <img id="Base"style="vertical-align: middle; height: 550px; width: 1910px;" src="pexels-photo-414171.jpeg"/>
+      </div>
+      
+      <section style=" margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  ">
+            <h3>About Me and Goals</h3>
+            <textarea rows="10" cols="85" id="Info">
+                    Type here to enter your description about yourself.
+                    </textarea>
+            <div>
+                    <input type="checkbox" id="123" onclick="changeText(this.id);"><span>Please check this.</span>
+        </div>
+          </section>
+          
+          <!--<section style=" margin: 0 auto;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;">
+            <h3 >Goals</h3>
+            <textarea rows="4" cols="50" id="Info">
+                   Type here to enter your goals.
+                    </textarea>
+            <div>
+                    <input type="checkbox" id="123" onclick="changeText(this.sid);"><span>Please check this.</span>
+          </section>-->
+
+</body>
+</html>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
@@ -14,14 +17,18 @@
 
 <h1 style="text-align: center; font-size: 70px;">Smart Living OS</h1>
 <div style="text-align: center; padding-bottom: 50px;">
-<button type="button"  onclick="alert('You Clicked Login')" style=" height: 50px;width: 100px;font-size: 20px;">Login</button>
+<button type="button" id="loginButton" onclick="alert('You Clicked Login')" style=" height: 50px;width: 100px;font-size: 20px;">Login</button>
 </div>
 <div style="text-align: center;">
-<button id="myButton"  class="float-left submit-button" style=" height: 50px;width: 100px;font-size: 20px;" >Create Account</button>
+<button id="myButton"  class="float-left submit-button" style=" height: 50px;width: 100px;font-size: 15px;" >Create Account</button>
 
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
         location.href = "CreateAccount.html";
+    };
+
+    document.getElementById("loginButton").onclick = function () {
+        location.href = "UserPage.html";
     };
 </script>
 </div>
