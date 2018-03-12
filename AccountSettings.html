@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function myOtherFunction() {
+            document.getElementById("logoutButton").onclick = function () {
+                location.href = "index.html";
+            };
+        }
+        function accountSettingsFunction() {
+    document.getElementById("accountSettings").onclick = function () {
+        location.href = "AccountSettings.html";
+    };
+
+}
+function myPageFunction() {
+    document.getElementById("myPage").onclick = function () {
+        location.href = "UserPage.html";
+    };
+}
+    </script>
+    <style>
+
+        body{
+            background-color: burlywood;
+        }
+        .header {
+            padding: 10px 16px;
+            background: #555;
+            color: #f1f1f1;
+        }
+
+        /* Style the tab */
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        #PageTitle {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="myHeader">
+        <h1>Hello, Vas Binglebear</h1>
+    </div>
+    <div class="tab">
+        <button id="myPage" onclick="myPageFunction()">My Page</button>
+        <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
+        <button class="tablinks">Add Data</button>
+        <button class="tablinks">Generate Report</button>
+        <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
+    </div>
+    <div>
+        <h1 id="PageTitle">Account Settings</h1>
+    </div>
+    <form style="width: 750px;margin: 0 auto;">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="fName">First Name</label>
+                <input type="text" class="form-control" id="fName" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lName">Last Name</label>
+                <input type="text" class="form-control" id="lName" placeholder="Last Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail5">Confirm Email</label>
+                <input type="text" class="form-control" id="inputEmail5" placeholder="Confirm Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Confirm Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Date">Date of Birth</label>
+            <input type="date" class="form-control" id="Date" placeholder="MM/DD/YYYY">
+        </div>
+
+        <div class="col-md-12 text-center"> 
+                <button id="button" name="button" class="btn btn-primary">Confirm Changes</button> 
+              </div>
+
+    </form>
+</body>
+
+</html>
