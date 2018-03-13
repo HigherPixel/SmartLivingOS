@@ -135,7 +135,7 @@
             <p>
                 <input type="range" min="1" max="10" value="1" class="slider" id="myRange1">
             </p>
-            <p>Value:
+            <p>Quality:
                 <span id="demo"></span>
             </p>
             <p>How many hours did you sleep?</p>
@@ -156,9 +156,15 @@
         <div class="tab">
             <div>
                 <h2>Your Medical Information</h2>
-                <div class="form-group col-md-6">
-                    <label for="Height">Height</label>
-                    <input type="text" class="form-control" id="Height" placeholder="">
+                <div id="HeightInfo">
+                <div class="form-group col-md-3">
+                    <label for="Height">Feet</label>
+                    <input type="number" class="form-control" id="Height" placeholder="Feet" min="0" max="9">
+                </div>
+                <div class="form-group col-md-3">
+                        <label for="Height">Inches</label>
+                        <input type="number" class="form-control" id="Height" placeholder="Inches" min="0" max="12">
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="Weight">Weight</label>
@@ -204,8 +210,9 @@
                     </div>
 
                 </div>
-                <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
-
+                <div>
+                    <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
+                </div>
                 <div id="room_fileds">
                     <div id="liquid">
                         <span>Liquid Drank:
@@ -213,7 +220,9 @@
                     </div>
 
                 </div>
-                <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
+                <div>
+                    <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
+                </div>
                 <br>
                 <div class="form-group col-lg-12">
                     <label for="HR">Distance Ran</label>
@@ -232,7 +241,8 @@
                     <input type="text" class="form-control" id="HR" placeholder="">
                 </div>
                 <br>
-                <table class="table table-bordered table-condensed">
+                <label for="myTable">Exercise Table</label>
+                <table id="myTable" class="table table-bordered table-condensed">
                     <tbody>
                         <tr>
                             <td>
@@ -310,6 +320,8 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <input type="button" id="more_fields" onclick=" add_row();" value="Add More" />
             </div>
         </div>
 
@@ -324,10 +336,20 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
             </div>
+            <div style="float:left;">
+                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+
+                </div>
         </div>
+        
 
     </form>
     <script>
+        function myPageFunction() {
+            document.getElementById("myPage").onclick = function () {
+                location.href = "UserPage.html";
+            };
+        }
         function add_fields() {
             var d = document.getElementById("food");
 
@@ -338,7 +360,29 @@
 
             d.innerHTML += "<br /><span>Liquid Drank: <input type='text' 'value='' /></span>";
         }
-
+        function add_row() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(5);
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("input");
+            t1.className = "form-control";
+            cell1.appendChild(t1);
+            var cell2 = row.insertCell(1);
+            var t2 = document.createElement("input");
+            t2.className = "form-control";
+            t2.setAttribute("type", "number");
+            cell2.appendChild(t2);
+            var cell3 = row.insertCell(2);
+            var t3 = document.createElement("input");
+            t3.className = "form-control";
+            t3.setAttribute("type", "number");
+            cell3.appendChild(t3);
+            var cell4 = row.insertCell(3);
+            var t4 = document.createElement("input");
+            t4.className = "form-control";
+            t4.setAttribute("type", "number");
+            cell4.appendChild(t4);
+        }
         var slider = document.getElementById("myRange2");
         var output = document.getElementById("hours");
         output.innerHTML = slider.value;
@@ -367,7 +411,7 @@
             x[n].style.display = "block";
             //... and fix the Previous/Next buttons:
             if (n == 0) {
-                document.getElementById("prevBtn").style.display = "inline";
+                document.getElementById("prevBtn").style.display = "none";
                 document.getElementById("prevBtn").innerHTML = "Back To My Page";
             } else {
                 document.getElementById("prevBtn").style.display = "inline";
