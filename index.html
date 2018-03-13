@@ -29,24 +29,29 @@
 </head>
 
 <body>
-
+    
     <h1 style="text-align: center; font-size: 70px;">Smart Living OS</h1>
-    <div style="text-align: center; padding-bottom: 50px; padding-top: 50px;">
-        <form action="/action_page.php">
-            User Name:
-            <input type="text" name="userName">
-            <br>
-            <br> Password:
-            <input type="password" name="password">
-            <br>
-        </form>
+
+    <div style="    text-align: center;">
+        <img id="Base" style="vertical-align: middle;" src="Untitled.png" />
+    </div>
+    <div style="text-align: center; padding-bottom: 50px; padding-top: 50px; width: 50%; margin: auto;">
+        <form class="form-signin">       
+            <h2 style="text-align: center; font-size: 45px;"  class="form-signin-heading">Login or Create an Account Today!</h2>
+            <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label>
+            <div style="text-align: center;">
+                <button type="button" id="loginButton">Login Account</button>
+                <button type="button" id="myButton">Create Account</button>
+            </div>
+          </form>
 
 
     </div>
-    <div style="text-align: center;">
-        <button type="button" id="loginButton">Login Account</button>
-        <button type="button" id="myButton">Create Account</button>
-    </div>
+    
     <script type="text/javascript">
         document.getElementById("myButton").onclick = function () {
             location.href = "CreateAccount.html";
