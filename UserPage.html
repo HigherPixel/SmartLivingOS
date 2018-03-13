@@ -16,12 +16,14 @@
             document.getElementById("logoutButton").onclick = function () {
                 location.href = "index.html";
             };
+            return false;
         }
 
         function accountSettingsFunction() {
             document.getElementById("accountSettings").onclick = function () {
                 location.href = "AccountSettings.html";
             };
+            return false;
         }
         function myPageFunction() {
             document.getElementById("myPage").onclick = function () {
@@ -153,7 +155,7 @@
         <button id="myPage" class="tablinks">My Page</button>
         <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
         <button id="addData" onclick="addDataFunction()" class="tablinks">Add Data</button>
-        <button class="tablinks">Generate Report</button>
+        <button class="tablinks" href="CreateAccount.html">Generate Report</button>
         <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
     </div>
     <div style="    text-align: center;">
