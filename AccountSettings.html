@@ -13,22 +13,27 @@
             };
         }
         function accountSettingsFunction() {
-    document.getElementById("accountSettings").onclick = function () {
-        location.href = "AccountSettings.html";
-    };
+            document.getElementById("accountSettings").onclick = function () {
+                location.href = "AccountSettings.html";
+            };
 
-}
-function myPageFunction() {
-    document.getElementById("myPage").onclick = function () {
-        location.href = "UserPage.html";
-    };
-}
+        }
+        function myPageFunction() {
+            document.getElementById("myPage").onclick = function () {
+                location.href = "UserPage.html";
+            };
+        }
+        function addDataFunction() {
+            document.getElementById("addData").onclick = function () {
+                location.href = "AddData.html";
+            };
+        }
     </script>
     <style>
-
-        body{
+        body {
             background-color: burlywood;
         }
+
         .header {
             padding: 10px 16px;
             background: #555;
@@ -89,7 +94,7 @@ function myPageFunction() {
     <div class="tab">
         <button id="myPage" onclick="myPageFunction()">My Page</button>
         <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
-        <button class="tablinks">Add Data</button>
+        <button id="addData" onclick="addDataFunction()" class="tablinks">Add Data</button>
         <button class="tablinks">Generate Report</button>
         <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
     </div>
@@ -128,9 +133,9 @@ function myPageFunction() {
             <input type="date" class="form-control" id="Date" placeholder="MM/DD/YYYY">
         </div>
 
-        <div class="col-md-12 text-center"> 
-                <button id="button" name="button" class="btn btn-primary">Confirm Changes</button> 
-              </div>
+        <div class="col-md-12 text-center">
+            <button id="button" name="button" class="btn btn-primary">Confirm Changes</button>
+        </div>
 
     </form>
 </body>
