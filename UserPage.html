@@ -14,19 +14,19 @@
             });
         });
         function myOtherFunction() {
-            
-			location.href = "index.html";
+
+            location.href = "index.html";
 
         }
 
         function accountSettingsFunction() {
-           
-			location.href = "AccountSettings.html";
+
+            location.href = "AccountSettings.html";
 
         }
         function myPageFunction() {
-            
-			location.href = "UserPage.html";
+
+            location.href = "UserPage.html";
         }
 
 
@@ -42,23 +42,12 @@
         }
 
 
-        window.onscroll = function () { myFunction() };
-
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
+        
         function addDataFunction() {
             document.getElementById("addData").onclick = function () {
                 //location.href = "AddData.html";
             };
-			location.href = "AddData.html";
+            location.href = "AddData.html";
         }
     </script>
 
@@ -141,40 +130,81 @@
             left: 850px;
             z-index: 2;
         }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #555;
+            overflow-x: hidden;
+            padding-top: 20px;
+            border: 3px solid white;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 0px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="header" id="myHeader">
-        <h1>Hello, Vas Binglebear</h1>
+
+    <div class="sidenav">
+        <p style="color: white;">Name: Vas Binglebear</p>
+        <p style="color: white;">Stat 1</p>
+        <p style="color: white;">Stat 2</p>
+        <p style="color: white;">Stat 3</p>
     </div>
 
+    <div class="main">
+        <div class="header" id="myHeader">
+            <h1>Hello, Vas Binglebear</h1>
+        </div>
+        <div class="tab">
+            <button id="myPage" class="tablinks">My Page</button>
+            <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
+            <button id="addData" onclick="addDataFunction()" class="tablinks">Add Data</button>
+            <button class="tablinks" href="CreateAccount.html">Generate Report</button>
+            <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
+        </div>
+        <div style="    text-align: center;">
+            <img id="Base" style="vertical-align: middle; height: 550px;" src="pexels-photo-414171.jpeg" />
+        </div>
 
-    <div class="tab">
-        <button id="myPage" class="tablinks">My Page</button>
-        <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
-        <button id="addData" onclick="addDataFunction()" class="tablinks">Add Data</button>
-        <button class="tablinks" href="CreateAccount.html">Generate Report</button>
-        <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
-    </div>
-    <div style="    text-align: center;">
-        <img id="Base" style="vertical-align: middle; height: 550px; width: 1910px;" src="pexels-photo-414171.jpeg" />
-    </div>
-
-    <section style=" margin: 0 auto;
+        <section style=" margin: 0 auto;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
   ">
-        <h3>About Me and Goals</h3>
-        <textarea rows="10" cols="85" id="Info" readonly>
+            <h3>About Me and Goals</h3>
+            <textarea rows="10" cols="85" id="Info" readonly>
                     Type here to enter your description about yourself.
                     </textarea>
-        <div>
-            <input type="checkbox" id="123" onclick="changeText(this.id);">
-            <span>Click for Edit Mode</span>
-        </div>
-    </section>
+            <div>
+                <input type="checkbox" id="123" onclick="changeText(this.id);">
+                <span>Click for Edit Mode</span>
+            </div>
+        </section>
+    </div>
 
     <!--<section style=" margin: 0 auto;
           margin-left: auto;
