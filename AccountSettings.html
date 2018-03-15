@@ -6,30 +6,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Account Settings</title>
     <script>
         function myOtherFunction() {
-            document.getElementById("logoutButton").onclick = function () {
-                //location.href = "index.html";
-            };
+        
 			location.href = "index.html";
         }
         function accountSettingsFunction() {
-            document.getElementById("accountSettings").onclick = function () {
-                //location.href = "AccountSettings.html";
-            };
+            
 			location.href = "AccountSettings.html";
 
         }
         function myPageFunction() {
-            document.getElementById("myPage").onclick = function () {
-                //location.href = "UserPage.html";
-            };
+            
 			location.href = "UserPage.html";
         }
         function addDataFunction() {
-            document.getElementById("addData").onclick = function () {
-                //location.href = "AddData.html";
-            };
+            
 			location.href = "AddData.html";
         }
     </script>
@@ -124,6 +117,10 @@
                 <input type="text" class="form-control" id="inputEmail5" placeholder="Confirm Email">
             </div>
             <div class="form-group col-md-6">
+                <label for="inputPassword1">Confirm Current Password</label>
+                <input type="password" class="form-control" id="inputPassword1" placeholder="Confirm Current Password">
+            </div>
+            <div class="form-group col-md-6">
                 <label for="inputPassword">Password</label>
                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
             </div>
@@ -137,8 +134,20 @@
             <input type="date" class="form-control" id="Date" placeholder="MM/DD/YYYY">
         </div>
 
-        <div class="col-md-12 text-center">
-            <button id="button" name="button" class="btn btn-primary">Confirm Changes</button>
+        <div class="col-md-6 text-center">
+            <button id="button" name="button" class="btn btn-primary">Setup Fitbit</button>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <button id="button" name="button" class="btn btn-primary">Setup Alexa</button>
+        </div>
+        <br>
+        <div class="col-md-6 text-center"style="padding-top: 15px;">
+            <button id="button" name="button" class="btn btn-danger">Delete Account</button>
+        </div>
+
+        <div class="col-md-6 text-center"style="padding-top: 15px;">
+            <button id="button" name="button" class="btn btn-success">Confirm Changes</button>
         </div>
 
     </form>
