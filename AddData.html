@@ -131,19 +131,22 @@
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
             <h2>Your Sleep Information</h2>
-            <p>On a scale from 1 to 10, how well did you sleep last night?</p>
-            <p>
-                <input type="range" min="1" max="10" value="1" class="slider" id="myRange1">
-            </p>
-            <p>Quality:
-                <span id="demo"></span>
-            </p>
+
             <p>How many hours did you sleep?</p>
             <p>
-                <input type="range" min="1" max="24" value="1" class="slider" id="myRange2">
+                <input type="number" min="0" max="18" value="9" id="myBox2">
             </p>
-            <p>Hours:
+            <p>
+                Hours:
                 <span id="hours"></span>
+            </p>
+            <p>On a scale from 1 to 10, how well did you sleep last night? If you didn't sleep, enter 0.</p>
+            <p>
+                <input type="number" min="0" max="10" value="5" id="myBox1">
+            </p>
+            <p>
+                Quality:
+                <span id="demo"></span>
             </p>
             <div>
                 <h2>Your Emotional Information</h2>
@@ -157,18 +160,19 @@
             <div>
                 <h2>Your Medical Information</h2>
                 <div id="HeightInfo">
-                <div class="form-group col-md-3">
-                    <label for="Height">Feet</label>
-                    <input type="number" class="form-control" id="Height" placeholder="Feet" min="0" max="9">
-                </div>
-                <div class="form-group col-md-3">
+                    <p>Height and Weight</p>
+                    <div class="form-group col-md-3">
+                        <label for="Height">Feet</label>
+                        <input type="number" class="form-control" id="Height" placeholder="Feet" min="0" max="9">
+                    </div>
+                    <div class="form-group col-md-3">
                         <label for="Height">Inches</label>
-                        <input type="number" class="form-control" id="Height" placeholder="Inches" min="0" max="12">
+                        <input type="number" class="form-control" id="Height" placeholder="Inches" min="0" max="11">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="Weight">Weight</label>
-                    <input type="number" class="form-control" id="Weight" placeholder="">
+                    <label for="Weight">Pounds</label>
+                    <input type="number" class="form-control" id="Weight" placeholder="150" min="50">
                 </div>
                 <div class="form-group col-lg-12">
                     <label for="HR">Heart Rate</label>
@@ -176,23 +180,23 @@
                 </div>
                 <div>
                     <div class="form-group">
-                        <label for="sel1">Does your family have a history of Diabiates?</label>
+                        <label for="sel1">Does your family have a history of Diabetes?</label>
                         <select class="form-control" id="sel1">
-                            <option>Yes</option>
                             <option>No</option>
+                            <option>Yes</option>
                             <option>I don't know</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="sel1">Does your family have a history of Heart Dieases?</label>
+                        <label for="sel1">Does your family have a history of Heart Disease?</label>
                         <select class="form-control" id="sel1">
-                            <option>Yes</option>
                             <option>No</option>
+                            <option>Yes</option>
                             <option>I don't know</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="comment">Any Other Medical Problems?</label>
+                        <label for="comment">Any other medical history?</label>
                         <textarea class="form-control" rows="5" id="comment">List them here.</textarea>
                     </div>
                 </div>
@@ -205,7 +209,7 @@
 
                 <div id="room_fileds">
                     <div id="food">
-                        <span>Food Eaten:
+                        <span>Food Eaten
                             <input type="text" name="width[]" value="Food Eaten" />
                     </div>
 
@@ -215,7 +219,7 @@
                 </div>
                 <div id="room_fileds">
                     <div id="liquid">
-                        <span>Liquid Drank:
+                        <span>Liquid Drunk
                             <input type="text" name="width[]" value="Liquid Drank" />
                     </div>
 
@@ -338,20 +342,20 @@
             t4.setAttribute("type", "number");
             cell4.appendChild(t4);
         }
-        var slider = document.getElementById("myRange2");
-        var output = document.getElementById("hours");
-        output.innerHTML = slider.value;
+        var textbox2 = document.getElementById("myBox2");
+        var output2 = document.getElementById("hours");
+        output2.innerHTML = textbox2.value;
 
-        slider.oninput = function () {
-            output.innerHTML = this.value;
+        textbox2.oninput = function () {
+            output2.innerHTML = this.value;
         }
     </script>
     <script>
-        var slider1 = document.getElementById("myRange1");
+        var textbox1 = document.getElementById("myBox1");
         var output1 = document.getElementById("demo");
-        output1.innerHTML = slider.value;
+        output1.innerHTML = textbox1.value;
 
-        slider1.oninput = function () {
+        textbox1.oninput = function () {
             output1.innerHTML = this.value;
         }
     </script>
