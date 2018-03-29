@@ -31,16 +31,6 @@
         }
 
 
-        function changeText(id) {
-
-            if ($('#' + id).is(':checked')) {
-                $('#' + id + "+span").html('Edit Mode');
-                document.getElementById("Info").readOnly = false;
-            } else {
-                $('#' + id + "+span").html('Click for Edit Mode');
-                document.getElementById("Info").readOnly = true;
-            }
-        }
 
 
         
@@ -230,7 +220,7 @@
 			    <!-- dropdown menu -->
 			    <ul class="dropdown-menu">
 			        <li><a href="AddData.html">Add All</a></li>
-			        <li><a href="SleepData.html">Sleep Data</a></li>
+			        <li><a href="#about">About</a></li>
 			        <li><a href="#contact">Contact</a></li>
 
 			    </ul>
@@ -239,37 +229,43 @@
             <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
-        <div style="    text-align: center;">
-            <img id="Base" style="vertical-align: middle; height: 550px;" src="pexels-photo-414171.jpeg" />
-        </div>
+		<div>
+			<form>
+			  	<form id="regForm">
+			        <h1>Add Data</h1>
+			        <!-- One "tab" for each step in the form: -->
+			        <div class="tab">
+			            <h2>Your Sleep Information</h2>
 
-        <section style=" margin: 0 auto;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-  ">
-            <h3>About Me and Goals</h3>
-            <textarea rows="10" cols="85" id="Info" readonly>
-                    Type here to enter your description about yourself.
-                    </textarea>
-            <div>
-                <input type="checkbox" id="123" onclick="changeText(this.id);">
-                <span>Click for Edit Mode</span>
-            </div>
-        </section>
-    </div>
+			            <p>How many hours did you sleep?</p>
+			            <p>
+			                <input type="number" min="0" max="18" value="9" id="myBox2">
+			            </p>
+			            <p>
+			                Hours:
+			                <span id="hours"></span>
+			            </p>
+			            <p>On a scale from 1 to 10, how well did you sleep last night? If you didn't sleep, enter 0.</p>
+			            <p>
+			                <input type="number" min="0" max="10" value="5" id="myBox1">
+			            </p>
+			            <p>
+			                Quality:
+			                <span id="demo"></span>
+			            </p>
+			            <div>
+							<div style="overflow:auto;">
+					            <div style="float:right;">
+					                <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+					            </div>
+					            <div style="float:left;">
+					                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
 
-    <!--<section style=" margin: 0 auto;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;">
-            <h3 >Goals</h3>
-            <textarea rows="4" cols="50" id="Info">
-                   Type here to enter your goals.
-                    </textarea>
-            <div>
-                    <input type="checkbox" id="123" onclick="changeText(this.sid);"><span>Please check this.</span>
-          </section>-->
+					                </div>
+					        </div>
+			</form>
+		</div>
+
 
 </body>
 
