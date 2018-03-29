@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>User Page</title>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -31,16 +31,6 @@
         }
 
 
-        function changeText(id) {
-
-            if ($('#' + id).is(':checked')) {
-                $('#' + id + "+span").html('Edit Mode');
-                document.getElementById("Info").readOnly = false;
-            } else {
-                $('#' + id + "+span").html('Click for Edit Mode');
-                document.getElementById("Info").readOnly = true;
-            }
-        }
 
 
         
@@ -54,6 +44,15 @@
     </script>
 
     <style>
+        #nuteForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+    }
+
         body {
             background-color: #ee7600;
         }
@@ -229,12 +228,12 @@
 
 			    <!-- dropdown menu -->
 			    <ul class="dropdown-menu">
-                        <li><a href="AddData.html">Add All</a></li>
-                        <li><a href="SleepData.html">Sleep Data</a></li>
-                        <li><a href="NutrutionData.html">Nutrution Data</a></li>
-                        <li><a href="ExersiceData.html">Exersice Data</a></li>
-                        <li><a href="EmotionalData.html">Emotional Data</a></li>
-                        <li><a href="MedicalData.html">Medical Data</a></li>
+			        <li><a href="AddData.html">Add All</a></li>
+			        <li><a href="SleepData.html">Sleep Data</a></li>
+			        <li><a href="NutrutionData.html">Nutrution Data</a></li>
+                    <li><a href="ExersiceData.html">Exersice Data</a></li>
+                    <li><a href="EmotionalData.html">Emotional Data</a></li>
+			        <li><a href="MedicalData.html">Medical Data</a></li>
 
 			    </ul>
 
@@ -242,37 +241,17 @@
             <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
-        <div style="    text-align: center;">
-            <img id="Base" style="vertical-align: middle; height: 550px;" src="pexels-photo-414171.jpeg" />
-        </div>
+		<div>
 
-        <section style=" margin: 0 auto;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-  ">
-            <h3>About Me and Goals</h3>
-            <textarea rows="10" cols="85" id="Info" readonly>
-                    Type here to enter your description about yourself.
-                    </textarea>
-            <div>
-                <input type="checkbox" id="123" onclick="changeText(this.id);">
-                <span>Click for Edit Mode</span>
-            </div>
-        </section>
-    </div>
+			  	<form id="nuteForm">
+                        <h2>Your Emotional Information</h2>
+                        <div class="button-box col-lg-12">
+                            <a class="btn btn-info" role="button">Manual Entry</a>
+                            <a h class="btn btn-info" role="button">Email Questions</a>
+                        </div>
+			</form>
+		</div>
 
-    <!--<section style=" margin: 0 auto;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;">
-            <h3 >Goals</h3>
-            <textarea rows="4" cols="50" id="Info">
-                   Type here to enter your goals.
-                    </textarea>
-            <div>
-                    <input type="checkbox" id="123" onclick="changeText(this.sid);"><span>Please check this.</span>
-          </section>-->
 
 </body>
 

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>User Page</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+        function myOtherFunction() {
+
+            location.href = "index.html";
+
+        }
+
+        function accountSettingsFunction() {
+
+            location.href = "AccountSettings.html";
+
+        }
+
+        function myPageFunction() {
+
+            location.href = "UserPage.html";
+        }
+
+
+
+
+        
+        function addDataFunction() {
+            document.getElementById("addData").onclick = function () {
+                //location.href = "AddData.html";
+            };
+            location.href = "AddData.html";
+        }
+
+    </script>
+
+    <style>
+        #nuteForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+    }
+
+        body {
+            background-color: #ee7600;
+        }
+
+        /* Style the tab */
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+		.dropdown {
+		    position: absolute;
+
+		    /** Make it fit tightly around it's children */
+		    display: inline-block;
+		}
+
+		.dropdown .dropdown-menu {
+		    position: absolute;
+
+		    /**
+		     * Set the top of the dropdown menu to be positioned 100%
+		     * from the top of the container, and aligned to the left.
+		     */
+		    top: 100%;
+		    left: 0;
+
+		    /** Allow no empty space between this and .dropdown */
+			display: none;
+		    margin: 0;
+
+		    /****************
+		     ** NEW STYLES **
+		     ****************/
+
+		    list-style: none; /** Remove list bullets */
+		    width: 100%; /** Set the width to 100% of it's parent */
+		    padding: 0;
+			
+		}
+		.dropdown:hover .dropdown-menu {
+
+		    /** Show dropdown menu */
+		    display: block;
+		}
+		
+
+        /* Change background color of buttons on hover */
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .header {
+            padding: 10px 16px;
+            background: #555;
+            color: #f1f1f1;
+            z-index: 3;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 102px;
+        }
+
+        #Base {
+            top: 100px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        #ProfilePic {
+            position: absolute;
+            top: 300px;
+            left: 850px;
+            z-index: 2;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #555;
+            overflow-x: hidden;
+            padding-top: 20px;
+            border: 3px solid white;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <p style="color: white; font-size: 18px; text-align: center;">Name: Vas Binglebear</p>
+        <img style="width: 100%;" src="download.png" />
+        <p style="color: white;">Stat 1</p>
+        <p style="color: white;">Stat 2</p>
+        <p style="color: white;">Stat 3</p>
+    </div>
+
+    <div class="main">
+        <div class="header" id="myHeader">
+            <h1>Hello, Vas Binglebear</h1>
+        </div>
+
+        <div class="tab">
+            <button id="myPage" class="tablinks" onclick="myPageFunction()">My Page</button>
+            <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
+			<div class="dropdown">
+
+			    <!-- trigger button -->
+			    <button style = "font-family:verdana; font-size:17">Add Data</button>
+
+			    <!-- dropdown menu -->
+			    <ul class="dropdown-menu">
+                        <li><a href="AddData.html">Add All</a></li>
+                        <li><a href="SleepData.html">Sleep Data</a></li>
+                        <li><a href="NutrutionData.html">Nutrution Data</a></li>
+                        <li><a href="ExersiceData.html">Exersice Data</a></li>
+                        <li><a href="EmotionalData.html">Emotional Data</a></li>
+                        <li><a href="MedicalData.html">Medical Data</a></li>
+
+			    </ul>
+
+			</div>
+            <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
+            <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
+        </div>
+		<div>
+
+			  	<form id="nuteForm">
+                        <div>
+                                <h2>Your Nutruition Information</h2>
+                
+                
+                                <div class="form-group col-md-6" id="room_fileds">
+                                    <div id="food">
+                                        <span>Food Eaten
+                                            <input type="text" name="width[]" value="Food Eaten" />
+                                            <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
+                                    </div>
+
+                                </div>
+                                
+                                <div class="form-group col-md-6" id="room_fileds">
+                                    <div id="liquid">
+                                        <span>Liquid Drunk
+                                            <input type="text" name="width[]" value="Liquid Drank" />
+                                            <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
+                                    </div>
+                
+                                </div>
+                                <br>
+                                <div class="form-group col-lg-12">
+                                    <label for="HR">Distance Ran</label>
+                                    <input type="text" class="form-control" id="HR" placeholder="">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label for="HR">Distance Walk</label>
+                                    <input type="text" class="form-control" id="HR" placeholder="">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label for="HR">Steps Taken</label>
+                                    <input type="text" class="form-control" id="HR" placeholder="">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label for="HR">Stairs Climbed</label>
+                                    <input type="text" class="form-control" id="HR" placeholder="">
+                                </div>
+                                <br>
+                                <label for="myTable">Exercise Table</label>
+                                <table id="myTable" class="table table-bordered table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="form-control" readonly value="Exercise " />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" readonly value="Sets # " />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" readonly value="Reps # " />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" readonly value="Weight " />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" />
+                                            </td>
+                
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                
+                                <input type="button" id="more_fields" onclick=" add_row();" value="Add More" />
+                            </div>
+			</form>
+        </div>
+    <script>
+        function add_fields() {
+            var d = document.getElementById("food");
+
+            d.innerHTML += "<br /><span>Food Eaten: <input type='text' 'value='' /></span>";
+        }
+        function add_field() {
+            var d = document.getElementById("liquid");
+
+            d.innerHTML += "<br /><span>Liquid Drank: <input type='text' 'value='' /></span>";
+        }
+        function add_row() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(2);
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("input");
+            t1.className = "form-control";
+            cell1.appendChild(t1);
+            var cell2 = row.insertCell(1);
+            var t2 = document.createElement("input");
+            t2.className = "form-control";
+            t2.setAttribute("type", "number");
+            cell2.appendChild(t2);
+            var cell3 = row.insertCell(2);
+            var t3 = document.createElement("input");
+            t3.className = "form-control";
+            t3.setAttribute("type", "number");
+            cell3.appendChild(t3);
+            var cell4 = row.insertCell(3);
+            var t4 = document.createElement("input");
+            t4.className = "form-control";
+            t4.setAttribute("type", "number");
+            cell4.appendChild(t4);
+        }
+        var textbox2 = document.getElementById("myBox2");
+        var output2 = document.getElementById("hours");
+        output2.innerHTML = textbox2.value;
+
+        textbox2.oninput = function () {
+            output2.innerHTML = this.value;
+        }
+    </script>
+    <script>
+        var textbox1 = document.getElementById("myBox1");
+        var output1 = document.getElementById("demo");
+        output1.innerHTML = textbox1.value;
+
+        textbox1.oninput = function () {
+            output1.innerHTML = this.value;
+        }
+    </script>
+
+</body>
+
+</html>
