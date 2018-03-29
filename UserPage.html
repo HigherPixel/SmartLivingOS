@@ -24,6 +24,7 @@
             location.href = "AccountSettings.html";
 
         }
+
         function myPageFunction() {
 
             location.href = "UserPage.html";
@@ -49,6 +50,7 @@
             };
             location.href = "AddData.html";
         }
+
     </script>
 
     <style>
@@ -75,6 +77,42 @@
             transition: 0.3s;
             font-size: 17px;
         }
+		.dropdown {
+		    position: fixed;
+
+		    /** Make it fit tightly around it's children */
+		    display: inline-block;
+		}
+
+		.dropdown .dropdown-menu {
+		    position: absolute;
+
+		    /**
+		     * Set the top of the dropdown menu to be positioned 100%
+		     * from the top of the container, and aligned to the left.
+		     */
+		    top: 100%;
+		    left: 0;
+
+		    /** Allow no empty space between this and .dropdown */
+			display: none;
+		    margin: 0;
+
+		    /****************
+		     ** NEW STYLES **
+		     ****************/
+
+		    list-style: none; /** Remove list bullets */
+		    width: 100%; /** Set the width to 100% of it's parent */
+		    padding: 0;
+			
+		}
+		.dropdown:hover .dropdown-menu {
+
+		    /** Show dropdown menu */
+		    display: block;
+		}
+		
 
         /* Change background color of buttons on hover */
 
@@ -180,11 +218,25 @@
         <div class="header" id="myHeader">
             <h1>Hello, Vas Binglebear</h1>
         </div>
+
         <div class="tab">
             <button id="myPage" class="tablinks" onclick="myPageFunction()">My Page</button>
             <button id="accountSettings" onclick="accountSettingsFunction()">Account Settings</button>
-            <button id="addData" onclick="addDataFunction()" class="tablinks">Add Data</button>
-            <button class="tablinks" href="CreateAccount.html">Generate Report</button>
+			<div class="dropdown">
+
+			    <!-- trigger button -->
+			    <button style = "font-family:verdana; font-size:17">Add Data</button>
+
+			    <!-- dropdown menu -->
+			    <ul class="dropdown-menu">
+			        <li><a href="#home">Home</a></li>
+			        <li><a href="#about">About</a></li>
+			        <li><a href="#contact">Contact</a></li>
+
+			    </ul>
+
+			</div>
+            <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
         <div style="    text-align: center;">
