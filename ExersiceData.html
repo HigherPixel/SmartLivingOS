@@ -243,85 +243,89 @@
         </div>
 		<div>
 
-			  	<form id="nuteForm">
-                        <div>
-                                <h2>Your Nutruition Information</h2>
-                
-                
-                                <div class="form-group col-md-6" id="room_fileds">
-                                    <div id="food">
-                                        <span>Food Eaten
-                                            <input type="text" name="width[]" value="Food Eaten" />
-                                            <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
-                                    </div>
+            <form id="nuteForm">
+                <div>
+                    <h2>Your Nutruition Information</h2>
+                    <div class="form-group col-md-6" id="room_fileds">
+                        <div id="food">
+                            <span>
+                                Food Eaten
+                                <input type="text" name="width[]" value="Food Eaten" />
+                                <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" id="room_fileds">
+                        <div id="liquid">
+                            <span>
+                                Liquid Drunk
+                                <input type="text" name="width[]" value="Liquid Drunk" />
+                                <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group col-lg-12">
+                        <label for="HR">Distance Ran</label>
+                        <input type="text" class="form-control" id="HR" placeholder="">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="HR">Distance Walk</label>
+                        <input type="text" class="form-control" id="HR" placeholder="">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="HR">Steps Taken</label>
+                        <input type="text" class="form-control" id="HR" placeholder="">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="HR">Stairs Climbed</label>
+                        <input type="text" class="form-control" id="HR" placeholder="">
+                    </div>
+                    <br>
+                    <label for="myTable">Exercise Table</label>
+                    <table id="myTable" class="table table-bordered table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" readonly value="Exercise " />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" readonly value="Sets # " />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" readonly value="Reps # " />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" readonly value="Weight " />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" />
+                                </td>
 
-                                </div>
-                                
-                                <div class="form-group col-md-6" id="room_fileds">
-                                    <div id="liquid">
-                                        <span>Liquid Drunk
-                                            <input type="text" name="width[]" value="Liquid Drank" />
-                                            <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
-                                    </div>
-                
-                                </div>
-                                <br>
-                                <div class="form-group col-lg-12">
-                                    <label for="HR">Distance Ran</label>
-                                    <input type="text" class="form-control" id="HR" placeholder="">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <label for="HR">Distance Walk</label>
-                                    <input type="text" class="form-control" id="HR" placeholder="">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <label for="HR">Steps Taken</label>
-                                    <input type="text" class="form-control" id="HR" placeholder="">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <label for="HR">Stairs Climbed</label>
-                                    <input type="text" class="form-control" id="HR" placeholder="">
-                                </div>
-                                <br>
-                                <label for="myTable">Exercise Table</label>
-                                <table id="myTable" class="table table-bordered table-condensed">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control" readonly value="Exercise " />
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" readonly value="Sets # " />
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" readonly value="Reps # " />
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" readonly value="Weight " />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" />
-                                            </td>
-                
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                
-                                <input type="button" id="more_fields" onclick=" add_row();" value="Add More" />
-                            </div>
-			</form>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <input type="button" id="more_fields" onclick=" add_row();" value="Add More" />
+                </div>
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+                    </div>
+                    <div style="float:left;">
+                        <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+                    </div>
+                </div>
+            </form>
         </div>
     <script>
         function add_fields() {
@@ -332,7 +336,7 @@
         function add_field() {
             var d = document.getElementById("liquid");
 
-            d.innerHTML += "<br /><span>Liquid Drank: <input type='text' 'value='' /></span>";
+            d.innerHTML += "<br /><span>Liquid Drunk: <input type='text' 'value='' /></span>";
         }
         function add_row() {
             var table = document.getElementById("myTable");

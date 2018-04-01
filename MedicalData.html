@@ -29,10 +29,6 @@
 
             location.href = "UserPage.html";
         }
-
-
-
-
         
         function addDataFunction() {
             document.getElementById("addData").onclick = function () {
@@ -242,8 +238,8 @@
         </div>
 		<div>
 
-			  	<form id="nuteForm">
-			        <h2>Your Medical Information</h2>
+            <form id="nuteForm">
+                <h2>Your Medical Information</h2>
                 <div id="HeightInfo">
                     <p>Height and Weight</p>
                     <div class="form-group col-md-3">
@@ -285,8 +281,15 @@
                         <textarea class="form-control" rows="5" id="comment">List them here.</textarea>
                     </div>
                 </div>
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+                    </div>
+                    <div style="float:left;">
+                        <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+                    </div>
+                </div>
             </div>
-			</form>
 		</div>
 
 

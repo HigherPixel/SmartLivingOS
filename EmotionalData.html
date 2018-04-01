@@ -30,10 +30,6 @@
             location.href = "UserPage.html";
         }
 
-
-
-
-        
         function addDataFunction() {
             document.getElementById("addData").onclick = function () {
                 //location.href = "AddData.html";
@@ -241,16 +237,24 @@
             <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
-		<div>
+        <div>
 
-			  	<form id="nuteForm">
-                        <h2>Your Emotional Information</h2>
-                        <div class="button-box col-lg-12">
-                            <a class="btn btn-info" role="button">Manual Entry</a>
-                            <a h class="btn btn-info" role="button">Email Questions</a>
-                        </div>
-			</form>
-		</div>
+            <form id="nuteForm">
+                <h2>Your Emotional Information</h2>
+                <div class="button-box col-lg-12">
+                    <a class="btn btn-info" role="button">Manual Entry</a>
+                    <a h class="btn btn-info" role="button">Email Questions</a>
+                </div>
+            </form>
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+                </div>
+                <div style="float:left;">
+                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+                </div>
+            </div>
+        </div>
 
 
 </body>
