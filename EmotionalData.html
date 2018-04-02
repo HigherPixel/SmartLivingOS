@@ -40,12 +40,12 @@
     </script>
 
     <style>
-        #nuteForm {
+        #regForm {
         background-color: #ffffff;
         margin: 100px auto;
         font-family: Raleway;
         padding: 40px;
-        width: 70%;
+        width: 90%;
         min-width: 300px;
     }
 
@@ -237,23 +237,34 @@
             <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
-        <div>
+        <div >
 
-            <form id="nuteForm">
-                <h2>Your Emotional Information</h2>
-                <div class="button-box col-lg-12">
-                    <a class="btn btn-info" role="button">Manual Entry</a>
-                    <a h class="btn btn-info" role="button">Email Questions</a>
-                </div>
-            </form>
-            <div style="overflow:auto;">
-                <div style="float:right;">
-                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
-                </div>
-                <div style="float:left;">
-                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
-                </div>
-            </div>
+            
+            <form id="regForm">
+			        <h1>Add Emotional Data</h1>
+			        <!-- One "tab" for each step in the form: -->
+			        <div class="button-box col-lg-12">
+                            <a class="btn btn-info" role="button">Manual Entry</a>
+                            <a h class="btn btn-info" role="button">Email Questions</a>
+                        </div>
+                        <div style="overflow:auto;">
+                                <div style="float:right;">
+                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+                                </div>
+                                <div style="float:left;">
+                                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+                                </div>
+                            </div>
+						<div style="overflow:auto;">
+					        <div style="float:right;">
+					            <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+					        </div>
+					        <div style="float:left;">
+					                <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+					            </div>
+					    </div>
+			</form>
+            
         </div>
 
 

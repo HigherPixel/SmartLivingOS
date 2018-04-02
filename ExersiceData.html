@@ -49,7 +49,7 @@
         margin: 100px auto;
         font-family: Raleway;
         padding: 40px;
-        width: 70%;
+        width: 90%;
         min-width: 300px;
     }
 
@@ -245,24 +245,7 @@
 
             <form id="nuteForm">
                 <div>
-                    <h2>Your Nutruition Information</h2>
-                    <div class="form-group col-md-6" id="room_fileds">
-                        <div id="food">
-                            <span>
-                                Food Eaten
-                                <input type="text" name="width[]" value="Food Eaten" />
-                                <input type="button" id="more_fields" onclick="add_fields();" value="Add More" />
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6" id="room_fileds">
-                        <div id="liquid">
-                            <span>
-                                Liquid Drunk
-                                <input type="text" name="width[]" value="Liquid Drunk" />
-                                <input type="button" id="more_fields" onclick="add_field();" value="Add More" />
-                        </div>
-                    </div>
-                    <br>
+            
                     <div class="form-group col-lg-12">
                         <label for="HR">Distance Ran</label>
                         <input type="text" class="form-control" id="HR" placeholder="">
@@ -328,16 +311,7 @@
             </form>
         </div>
     <script>
-        function add_fields() {
-            var d = document.getElementById("food");
-
-            d.innerHTML += "<br /><span>Food Eaten: <input type='text' 'value='' /></span>";
-        }
-        function add_field() {
-            var d = document.getElementById("liquid");
-
-            d.innerHTML += "<br /><span>Liquid Drunk: <input type='text' 'value='' /></span>";
-        }
+        
         function add_row() {
             var table = document.getElementById("myTable");
             var row = table.insertRow(2);

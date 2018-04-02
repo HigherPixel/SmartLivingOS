@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>User Page</title>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -44,7 +44,7 @@
     </script>
 
     <style>
-        #regForm {
+        #NutruitionForm {
         background-color: #ffffff;
         margin: 100px auto;
         font-family: Raleway;
@@ -229,7 +229,7 @@
 
 			    <!-- dropdown menu -->
 			    <ul class="dropdown-menu">
-                        <li><a href="AddData.html"> All Data</a></li>
+                        <li><a href="AddData.html">Add All</a></li>
                         <li><a href="SleepData.html">Sleep Data</a></li>
                         <li><a href="NutrutionData.html">Nutrution Data</a></li>
                         <li><a href="ExersiceData.html">Exersice Data</a></li>
@@ -242,40 +242,49 @@
             <button class="tablinks" href="CreateAccount.html"style ="padding-left:125px">Generate Report</button>
             <button id="logoutButton" onclick="myOtherFunction()">Log Out</button>
         </div>
-		<div>
-			  	<form id="regForm">
-			        <!-- One "tab" for each step in the form: -->
-			        <div class="">
-			            <h2>Your Sleep Information</h2>
-                        <div class="form-group col-lg-12">
-                                <label for="HR">How many hours did you sleep?</label>
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="form-group col-lg-12">
-                                    <label for="HR">On a scale from 1 to 10, how well did you sleep last night? If you didn't sleep, enter 0.</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                        <label for="HR">What time did you get in bed?</label>
-                                        <input type="text" class="form-control" id="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-lg-12">
-                                            <label for="HR">What time did you get out of bed?</label>
-                                            <input type="text" class="form-control" id="" placeholder="">
-                                        </div>
-			            
-						<div style="">
+		<div >
+
+			  	<form id="NutruitionForm">
+			        <h2>Add Nutruition Information</h2>
+                    <div class="form-group col-md-6" id="room_fileds">
+                        <div id="food">
+                            <span>
+                                Food Eaten
+                                <input type="text" name="width[]" value="Food Eaten" />
+                                <input type="button" id="more_fields" onclick="add_foods();" value="Add More" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" id="room_fileds">
+                        <div id="liquid">
+                            <span>
+                                Liquid Drunk
+                                <input type="text" name="width[]" value="Liquid Drunk" />
+                                <input type="button" id="more_fields" onclick="add_liquid();" value="Add More" />
+                        </div>
+                    </div>
+                    <div>
 					        <div style="float:right;">
 					            <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
 					        </div>
 					        <div style="float:left;">
 					                <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
 					            </div>
-                        </div>
-                        </div>
+					    </div>
 			</form>
         </div>
-        </div>
+        </div>  
+        <script>
+            function add_foods() {
+            var d = document.getElementById("food");
+
+            d.innerHTML += "<br /><span>Food Eaten: <input type='text' 'value='' /></span>";
+        }
+        function add_liquid() {
+            var d = document.getElementById("liquid");
+
+            d.innerHTML += "<br /><span>Liquid Drunk: <input type='text' 'value='' /></span>";
+        }
+        </script>
 
 
 </body>
