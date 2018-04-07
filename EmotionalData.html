@@ -47,6 +47,7 @@
         padding: 40px;
         width: 90%;
         min-width: 300px;
+        height: 1500px;
     }
 
         body {
@@ -241,29 +242,59 @@
 
             
             <form id="regForm">
-			        <h1>Add Emotional Data</h1>
-			        <!-- One "tab" for each step in the form: -->
-			        <div class="button-box col-lg-12">
-                            <a class="btn btn-info" role="button">Manual Entry</a>
-                            <a h class="btn btn-info" role="button">Email Questions</a>
-                        </div>
-                        <div style="overflow:auto;">
-                                <div style="float:right;">
-                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
-                                </div>
-                                <div style="float:left;">
-                                    <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
-                                </div>
-                            </div>
-						<div style="overflow:auto;">
-					        <div style="float:right;">
-					            <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
-					        </div>
-					        <div style="float:left;">
-					                <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
-					            </div>
-					    </div>
-			</form>
+                <h1>Add Emotional Data</h1>
+                <h2>In the past month, how often has each statement been true?<br />0 for not at all, 1 for sometimes, 2 for half or more, and 3 for all the time.</h2>
+
+                <div class="form-group col-lg-12">
+                    <label for="HR">Little interest of pleasure in actions.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Feeling down, depressed or hopeless.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Trouble falling asleep, staying asleep, or sleeping too much.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Feeling tired or having little energy.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Poor appetite or overeating.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Feeling bad about yourself - or that you're a failure or have let yourself or your loved ones down.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Trouble concentrating on things, such as reading the newspaper or watching television.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Moving or speaking so slowly that others could have noticed, or being so restless and fidgety you move more than usual.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Thoughts of hurting yourself or that it would be better to be dead.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">Any of the above have made it difficult for you to perform day-to-day activities or get along with others.</label>
+                    <input type="number" class="form-control" id="HR" min="0" max="3">
+                </div>
+
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
+                    </div>
+                    <div style="float:left;">
+                        <button type="button" id="myPage" onclick="myPageFunction()">Cancel Submission</button>
+                    </div>
+                </div>
+            </form>
             
         </div>
 
