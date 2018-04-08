@@ -131,31 +131,65 @@
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
             <h2>Your Sleep Information</h2>
-
-            <p>How many hours did you sleep?</p>
-            <p>
-                <input type="number" min="0" max="18" value="" id="myBox2">
-            </p>
-            <p>
-                Hours:
-                <span id="hours"></span>
-            </p>
-            <p>On a scale from 1 to 10, how well did you sleep last night? If you didn't sleep, enter 0.</p>
-            <p>
-                <input type="number" min="0" max="10" value="" id="myBox1">
-            </p>
-            <p>
-                Quality:
-                <span id="demo"></span>
-            </p>
-            <div>
-                <h2>Your Emotional Information</h2>
-                <div class="button-box col-lg-12">
-                    <a class="btn btn-info" role="button">Manual Entry</a>
-                    <a h class="btn btn-info" role="button">Email Questions</a>
-                </div>
+			 <label for="HR">How many hours did you sleep?</label>
+                <input type="text" class="form-control" id="" placeholder="">
             </div>
+            <div class="form-group col-lg-12">
+                    <label for="HR">On a scale from 1 to 10, how well did you sleep last night? If you didn't sleep, enter 0.</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="HR">How much time did you stay in bed without sleeping?</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div>
         </div>
+		        <div class="tab">
+					 <h2>Your Emotional Information</h2>
+							<form id="regForm">
+							    <h2>In the past month, how often has each statement been true?<br />0 for not at all, 1 for sometimes, 2 for half or more, and 3 for all the time.</h2>
+
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Little interest of pleasure in actions.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Feeling down, depressed or hopeless.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Trouble falling asleep, staying asleep, or sleeping too much.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Feeling tired or having little energy.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Poor appetite or overeating.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Feeling bad about yourself - or that you're a failure or have let yourself or your loved ones down.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Trouble concentrating on things, such as reading the newspaper or watching television.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Moving or speaking so slowly that others could have noticed, or being so restless and fidgety you move more than usual.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Thoughts of hurting yourself or that it would be better to be dead.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+							    <div class="form-group col-lg-12">
+							        <label for="HR">Any of the above have made it difficult for you to perform day-to-day activities or get along with others.</label>
+							        <input type="number" class="form-control" id="HR" min="0" max="3">
+							    </div>
+		            </div>
+			</div>
         <div class="tab">
             <div>
                 <h2>Your Medical Information</h2>
@@ -202,8 +236,10 @@
                 </div>
             </div>
         </div>
+
         <div class="tab">
             <div>
+				
                 <h2>Your Nutruition Information</h2>
 
 
