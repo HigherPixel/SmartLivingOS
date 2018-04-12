@@ -240,7 +240,7 @@
             <div class="tab">
                 <div>
 
-                    <h2>Your Nutruition Information</h2>
+                    <h2>Your Nutrition Information</h2>
 
 
                     <div id="room_fileds">
@@ -476,6 +476,14 @@
             x[n].className += " active";
         }
     </script>
+	<script>
+	var slider = document.getElementById("myRange");
+	var output = document.getElementById("slideout");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
 
 </body>
 
