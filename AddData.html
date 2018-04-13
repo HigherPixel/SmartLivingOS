@@ -131,18 +131,16 @@
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
             <h2>Your Sleep Information</h2>
-            <div class="slidercontainer">
-                <label for="HR">How many hours did you sleep?</label>
-                <input type="range" min = "0" max = "10" step=".25" value ="1" class="slider" id="myRange" placeholder=""><p>Value: <span id="slideout"></span></p>
-            </div>
-            <div class="slidercontainer">
+           
+                <label for="HR">How many hours did you sleep?(Max of 12 hours)</label>
+<input type="number" placeholder="" step="0.5" min="0" max="12"onkeydown="return false" />
                 <label for="HR">On a scale from 0 to 10, how well did you sleep last night?</label>
-                <input type="range" min="1" max="10" step="1" value="1" class="slider" id="myRange" placeholder=""><p>Value: <span id="slideout"></span></p>
-            </div>
-            <div class="slidercontainer">
-                <label for="HR">How much time did you stay in bed without sleeping?</label>
-                <input type="range" min="0" max="24" step=".5" value="0" class="slider" id="myRange" placeholder=""><p>Value: <span id="slideout"></span></p>
-            </div>
+<input type="number" placeholder="" step="1" min="0" max="10"onkeydown="return false" />
+            
+
+                <label for="HR">How much time did you stay in bed without sleeping?(In hours. Max of 18)</label>
+<input type="number" placeholder="" step="0.25" min="0" max="18"onkeydown="return false" />
+            
         </div>
         <div class="tab">
             <h2>Your Emotional Information</h2>
