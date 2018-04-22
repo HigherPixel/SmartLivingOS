@@ -190,3 +190,101 @@ where (MonthDate=(select Max(MonthDate) from MonthlyAve where AccountNum=1)) and
 select WeekDate, AveBedTime, AveSpentAsleep, AveExerciseTime, AveSteps, AveCal, AveSodium, AveTransFat, AveProtien, AveSaturatedFat, AveCholesterol, AveMood, MoodFlag
 from WeeklyAve
 where (WeekDate=(select Max(WeekDate) from WeeklyAve where AccountNum=1)) and (AccountNum=1);
+
+select Duration, DayDate
+from Day
+inner join Exercise
+on Day.DayID = Exercise.DayID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select Steps, DayDate
+from Day
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select Duration, DayDate
+from Day
+inner join Exercise
+on Day.DayID = Exercise.DayID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastYear . "') and (AccountNum = 3);
+
+select EncounterDate, Facility, Specialty, Clinitian, Reason, VisitType from EncounterHistory where AccountNum=3;
+
+select DiagnosisDate, DiagnosisType, DiagnosisStatus from Diagnosis where AccountNum=3;
+
+select DatePerscribed, MedicationName, LastFilled, Perscription from Medications where AccountNum=3;
+
+select ImmunizationDate, ImmunizationType, NumberRecieved from Immunizations where AccountNum=3;
+
+select AllergyDate, AllergyType,AllergyStatus from Allergies where AccountNum=3;
+
+select BSMeasurementDate, BloodSugarMeasure
+from BloodSugar
+where BSMeasurementDate=(select Max(BSMeasurementDate) from BloodSugar) and AccountNum=3
+
+select BPMeasurementDate, Systolic, Diastolic
+from BloodPressure
+where BPMeasurementDate=(select Max(BPMeasurementDate) from BloodPressure) and AccountNum=3;
+
+select CholMeasurementDate, CholMeasure 
+from Cholesterol 
+where CholMeasurementDate=(select Max(cholMeasurementDate) from Cholesterol) and AccountNum=3;
+
+select Calories, DayDate
+from Day
+inner join Nutrition
+on Day.DayID = Nutrition.DayID
+inner join FoodOrDrink
+on Nutrition.FoodID = FoodOrDrink.FoodID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastYear . "') and (AccountNum = 3);
+
+select Calories, Sodium, Sugars, Protien, TransFat, SaturatedFat, Cholesterol, DiataryFiber
+from Day
+inner join Nutrition
+on Day.DayID = Nutrition.DayID
+inner join FoodOrDrink
+on Nutrition.FoodID = FoodOrDrink.FoodID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select Calories, DayDate
+from Day
+inner join Nutrition
+on Day.DayID = Nutrition.DayID
+inner join FoodOrDrink
+on Nutrition.FoodID = FoodOrDrink.FoodID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select DayDate, Quality, Duration
+	from Day
+	inner join Sleep
+	on Sleep.DayID = Day.DayID
+	where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+  
+  select Duration, DayDate
+from Day
+inner join Exercise
+on Day.DayID = Exercise.DayID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select Steps, DayDate
+from Day
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select OverallMood, DayDate
+from Day
+inner join Mood
+on Day.DayID = Mood.DayID
+where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+
+select DayDate, Quality, Duration, TimeInBed
+	from Day
+	inner join Sleep
+	on Sleep.DayID = Day.DayID
+	where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastWeek . "') and (AccountNum = 3);
+  
+  select DayDate, Quality, Duration
+	from Day
+	inner join Sleep
+	on Sleep.DayID = Day.DayID
+	where (DayDate <='" . $todayStr . "') and (DayDate >='" . $lastYear . "') and (AccountNum = 3);
+  
+  
