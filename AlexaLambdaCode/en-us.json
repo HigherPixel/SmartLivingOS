@@ -1,0 +1,140 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "health and wellness",
+      "intents": [
+        {
+          "name": "AddFood",
+          "slots": [
+            {
+              "name": "FoodName",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "FoodAmount",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "FoodPortion",
+              "type": "portion"
+            },
+          ],
+          "samples": [
+            "add food",
+            "report food",
+            "add {FoodAmount} {FoodName}",
+            "add {FoodName}",
+            "report {FoodAmount}{FoodPortion} of {FoodName}"
+          ]
+        },
+        {
+          "name": "AddSleep",
+          "slots": [
+            {
+              "name": "SleepAmount",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "SleepQuality",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TimeInBed",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TimeFellAsleep",
+              "type": "AMAZON.TIME"
+            },
+            {
+              "name": "TimeOfWake",
+              "type": "AMAZON.TIME"
+            },
+            {
+              "name": "TimeOutOfBed",
+              "type": "AMAZON.TIME"
+            }
+          ],
+          "samples":
+          [
+            "add sleep",
+            "i slept {SleepAmount} hours",
+            "report sleep",
+            "add nap",
+            "i napped for {SleepAmount} hours"
+          ]
+        },
+        {
+          "name": "AddFootTravel",
+          "slots": [
+            {
+              "name": "feet",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "minutes",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "report jog",
+            "report walk",
+            "report run",
+            "add jog",
+            "add walk",
+            "add run",
+            "i ran",
+            "i walked",
+            "i jogged"
+          ]
+        },
+        {
+          "name": "AddWeightTraining",
+          "slots": [
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "reps",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "sets",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "report weight training",
+            "weight trained",
+            "lifted weights",
+            "add weight training",
+            "i lifted weights",
+            "i weight trained",
+            "weight train"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+      ]
+    }
+  }
+}
